@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831762CB2D15D20EE8997CB8 /* Pods_MVVM_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBA4C8C24A1427FBC10C7C9 /* Pods_MVVM_C.framework */; };
 		FC4651D4248A48B700508272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651D3248A48B700508272 /* AppDelegate.swift */; };
 		FC4651D6248A48B700508272 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651D5248A48B700508272 /* SceneDelegate.swift */; };
 		FC4651D8248A48B700508272 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651D7248A48B700508272 /* ViewController.swift */; };
 		FC4651DB248A48B700508272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4651D9248A48B700508272 /* Main.storyboard */; };
 		FC4651DD248A48B900508272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4651DC248A48B900508272 /* Assets.xcassets */; };
 		FC4651E0248A48B900508272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4651DE248A48B900508272 /* LaunchScreen.storyboard */; };
+		FC4651ED248A49E600508272 /* CreditCardSettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651EC248A49E600508272 /* CreditCardSettingCoordinator.swift */; };
+		FC4651EF248A4A6B00508272 /* CreditCardSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651EE248A4A6B00508272 /* CreditCardSettingViewModel.swift */; };
+		FC4651F1248A505100508272 /* BaseCoorinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651F0248A505100508272 /* BaseCoorinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2852D493B7E199F988E60C04 /* Pods-MVVM-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-C.release.xcconfig"; path = "Target Support Files/Pods-MVVM-C/Pods-MVVM-C.release.xcconfig"; sourceTree = "<group>"; };
+		C96B4656EAAF99A28917CA90 /* Pods-MVVM-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-C.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-C/Pods-MVVM-C.debug.xcconfig"; sourceTree = "<group>"; };
+		CDBA4C8C24A1427FBC10C7C9 /* Pods_MVVM_C.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_C.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4651D0248A48B700508272 /* MVVM-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4651D3248A48B700508272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4651D5248A48B700508272 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		FC4651DC248A48B900508272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC4651DF248A48B900508272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC4651E1248A48B900508272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC4651EC248A49E600508272 /* CreditCardSettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardSettingCoordinator.swift; sourceTree = "<group>"; };
+		FC4651EE248A4A6B00508272 /* CreditCardSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardSettingViewModel.swift; sourceTree = "<group>"; };
+		FC4651F0248A505100508272 /* BaseCoorinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoorinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831762CB2D15D20EE8997CB8 /* Pods_MVVM_C.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F8888041E623EC0EEBA8123 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C96B4656EAAF99A28917CA90 /* Pods-MVVM-C.debug.xcconfig */,
+				2852D493B7E199F988E60C04 /* Pods-MVVM-C.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6A028ECBA7F948CA8EE39F30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDBA4C8C24A1427FBC10C7C9 /* Pods_MVVM_C.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC4651C7248A48B700508272 = {
 			isa = PBXGroup;
 			children = (
 				FC4651D2248A48B700508272 /* MVVM-C */,
 				FC4651D1248A48B700508272 /* Products */,
+				0F8888041E623EC0EEBA8123 /* Pods */,
+				6A028ECBA7F948CA8EE39F30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +86,58 @@
 		FC4651D2248A48B700508272 /* MVVM-C */ = {
 			isa = PBXGroup;
 			children = (
+				FC4651E7248A493900508272 /* CreditCardSetting */,
 				FC4651D3248A48B700508272 /* AppDelegate.swift */,
 				FC4651D5248A48B700508272 /* SceneDelegate.swift */,
-				FC4651D7248A48B700508272 /* ViewController.swift */,
 				FC4651D9248A48B700508272 /* Main.storyboard */,
 				FC4651DC248A48B900508272 /* Assets.xcassets */,
 				FC4651DE248A48B900508272 /* LaunchScreen.storyboard */,
 				FC4651E1248A48B900508272 /* Info.plist */,
 			);
 			path = "MVVM-C";
+			sourceTree = "<group>";
+		};
+		FC4651E7248A493900508272 /* CreditCardSetting */ = {
+			isa = PBXGroup;
+			children = (
+				FC4651EB248A498F00508272 /* ViewModel */,
+				FC4651EA248A498900508272 /* Model */,
+				FC4651E9248A498100508272 /* ViewController */,
+				FC4651E8248A497900508272 /* Coordinator */,
+				FC4651F0248A505100508272 /* BaseCoorinator.swift */,
+			);
+			path = CreditCardSetting;
+			sourceTree = "<group>";
+		};
+		FC4651E8248A497900508272 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FC4651EC248A49E600508272 /* CreditCardSettingCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FC4651E9248A498100508272 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC4651D7248A48B700508272 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FC4651EA248A498900508272 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC4651EB248A498F00508272 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC4651EE248A4A6B00508272 /* CreditCardSettingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC4651E4248A48B900508272 /* Build configuration list for PBXNativeTarget "MVVM-C" */;
 			buildPhases = (
+				A597A51B5CA997EE32C6DF47 /* [CP] Check Pods Manifest.lock */,
 				FC4651CC248A48B700508272 /* Sources */,
 				FC4651CD248A48B700508272 /* Frameworks */,
 				FC4651CE248A48B700508272 /* Resources */,
+				F5FCC9C4798AA1BDC4633961 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +208,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A597A51B5CA997EE32C6DF47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVM-C-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5FCC9C4798AA1BDC4633961 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM-C/Pods-MVVM-C-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM-C/Pods-MVVM-C-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVM-C/Pods-MVVM-C-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC4651CC248A48B700508272 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4651F1248A505100508272 /* BaseCoorinator.swift in Sources */,
+				FC4651EF248A4A6B00508272 /* CreditCardSettingViewModel.swift in Sources */,
 				FC4651D8248A48B700508272 /* ViewController.swift in Sources */,
 				FC4651D4248A48B700508272 /* AppDelegate.swift in Sources */,
 				FC4651D6248A48B700508272 /* SceneDelegate.swift in Sources */,
+				FC4651ED248A49E600508272 /* CreditCardSettingCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,6 +402,7 @@
 		};
 		FC4651E5248A48B900508272 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C96B4656EAAF99A28917CA90 /* Pods-MVVM-C.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +421,7 @@
 		};
 		FC4651E6248A48B900508272 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2852D493B7E199F988E60C04 /* Pods-MVVM-C.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
