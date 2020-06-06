@@ -8,4 +8,5 @@ target 'MVVM-C' do
   # Pods for MVVM-C
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'SnapKit', '~> 5.0.0'
 end

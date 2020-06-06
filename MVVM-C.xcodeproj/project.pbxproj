@@ -10,13 +10,14 @@
 		831762CB2D15D20EE8997CB8 /* Pods_MVVM_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBA4C8C24A1427FBC10C7C9 /* Pods_MVVM_C.framework */; };
 		FC4651D4248A48B700508272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651D3248A48B700508272 /* AppDelegate.swift */; };
 		FC4651D6248A48B700508272 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651D5248A48B700508272 /* SceneDelegate.swift */; };
-		FC4651D8248A48B700508272 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651D7248A48B700508272 /* ViewController.swift */; };
-		FC4651DB248A48B700508272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4651D9248A48B700508272 /* Main.storyboard */; };
+		FC4651D8248A48B700508272 /* CreditCardSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651D7248A48B700508272 /* CreditCardSettingViewController.swift */; };
 		FC4651DD248A48B900508272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4651DC248A48B900508272 /* Assets.xcassets */; };
 		FC4651E0248A48B900508272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4651DE248A48B900508272 /* LaunchScreen.storyboard */; };
 		FC4651ED248A49E600508272 /* CreditCardSettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651EC248A49E600508272 /* CreditCardSettingCoordinator.swift */; };
 		FC4651EF248A4A6B00508272 /* CreditCardSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651EE248A4A6B00508272 /* CreditCardSettingViewModel.swift */; };
 		FC4651F1248A505100508272 /* BaseCoorinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651F0248A505100508272 /* BaseCoorinator.swift */; };
+		FCC25F7A248B0C45002992FE /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25F79248B0C45002992FE /* CreditCard.swift */; };
+		FCC25F7C248B0D0D002992FE /* FakeAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25F7B248B0D0D002992FE /* FakeAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,14 +27,15 @@
 		FC4651D0248A48B700508272 /* MVVM-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4651D3248A48B700508272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4651D5248A48B700508272 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC4651D7248A48B700508272 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC4651DA248A48B700508272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC4651D7248A48B700508272 /* CreditCardSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardSettingViewController.swift; sourceTree = "<group>"; };
 		FC4651DC248A48B900508272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC4651DF248A48B900508272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC4651E1248A48B900508272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC4651EC248A49E600508272 /* CreditCardSettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardSettingCoordinator.swift; sourceTree = "<group>"; };
 		FC4651EE248A4A6B00508272 /* CreditCardSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardSettingViewModel.swift; sourceTree = "<group>"; };
 		FC4651F0248A505100508272 /* BaseCoorinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoorinator.swift; sourceTree = "<group>"; };
+		FCC25F79248B0C45002992FE /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		FCC25F7B248B0D0D002992FE /* FakeAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +90,9 @@
 			children = (
 				FC4651E7248A493900508272 /* CreditCardSetting */,
 				FC4651D3248A48B700508272 /* AppDelegate.swift */,
+				FC4651F0248A505100508272 /* BaseCoorinator.swift */,
+				FCC25F7B248B0D0D002992FE /* FakeAPIService.swift */,
 				FC4651D5248A48B700508272 /* SceneDelegate.swift */,
-				FC4651D9248A48B700508272 /* Main.storyboard */,
 				FC4651DC248A48B900508272 /* Assets.xcassets */,
 				FC4651DE248A48B900508272 /* LaunchScreen.storyboard */,
 				FC4651E1248A48B900508272 /* Info.plist */,
@@ -100,11 +103,10 @@
 		FC4651E7248A493900508272 /* CreditCardSetting */ = {
 			isa = PBXGroup;
 			children = (
+				FCC25F78248B0C3A002992FE /* Model */,
 				FC4651EB248A498F00508272 /* ViewModel */,
-				FC4651EA248A498900508272 /* Model */,
 				FC4651E9248A498100508272 /* ViewController */,
 				FC4651E8248A497900508272 /* Coordinator */,
-				FC4651F0248A505100508272 /* BaseCoorinator.swift */,
 			);
 			path = CreditCardSetting;
 			sourceTree = "<group>";
@@ -120,16 +122,9 @@
 		FC4651E9248A498100508272 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FC4651D7248A48B700508272 /* ViewController.swift */,
+				FC4651D7248A48B700508272 /* CreditCardSettingViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		FC4651EA248A498900508272 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		FC4651EB248A498F00508272 /* ViewModel */ = {
@@ -138,6 +133,14 @@
 				FC4651EE248A4A6B00508272 /* CreditCardSettingViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FCC25F78248B0C3A002992FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCC25F79248B0C45002992FE /* CreditCard.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +205,6 @@
 			files = (
 				FC4651E0248A48B900508272 /* LaunchScreen.storyboard in Resources */,
 				FC4651DD248A48B900508272 /* Assets.xcassets in Resources */,
-				FC4651DB248A48B700508272 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC4651F1248A505100508272 /* BaseCoorinator.swift in Sources */,
+				FCC25F7C248B0D0D002992FE /* FakeAPIService.swift in Sources */,
 				FC4651EF248A4A6B00508272 /* CreditCardSettingViewModel.swift in Sources */,
-				FC4651D8248A48B700508272 /* ViewController.swift in Sources */,
+				FCC25F7A248B0C45002992FE /* CreditCard.swift in Sources */,
+				FC4651D8248A48B700508272 /* CreditCardSettingViewController.swift in Sources */,
 				FC4651D4248A48B700508272 /* AppDelegate.swift in Sources */,
 				FC4651D6248A48B700508272 /* SceneDelegate.swift in Sources */,
 				FC4651ED248A49E600508272 /* CreditCardSettingCoordinator.swift in Sources */,
@@ -267,14 +271,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FC4651D9248A48B700508272 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC4651DA248A48B700508272 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC4651DE248A48B900508272 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
