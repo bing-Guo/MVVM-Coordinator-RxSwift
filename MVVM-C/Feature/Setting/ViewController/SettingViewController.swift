@@ -15,9 +15,9 @@ class SettingViewController: UIViewController {
         
         switch item {
         case is CreditCardViewModel:
-            return self.configStudentCell(atIndex: indexPath)
+            return self.configStudentCell(vm: item, atIndex: indexPath)
         case is ButtonCellViewModel:
-            return self.configTeacherCell(atIndex: indexPath)
+            return self.configTeacherCell(vm: item, atIndex: indexPath)
         }
         
     }
@@ -54,6 +54,14 @@ class SettingViewController: UIViewController {
     }
     
     func bindViewModel() {
+        
+        func configStudentCell(vm: CreditCardViewModel, atIndex: IndexPath) -> UITableViewCell {
+            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "StudentTableViewCell", for: atIndex) as? StudentTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.viewModel = student
+            return cell
+        }
         
         self.viewModel.defaultCreditCard.asDriver().drive( tableView.rx.items ) { (tableView, row, model) -> UITableViewCell in
             
