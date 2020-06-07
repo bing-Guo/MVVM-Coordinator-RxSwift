@@ -18,6 +18,14 @@
 		FC4651F1248A505100508272 /* BaseCoorinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4651F0248A505100508272 /* BaseCoorinator.swift */; };
 		FCC25F7A248B0C45002992FE /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25F79248B0C45002992FE /* CreditCard.swift */; };
 		FCC25F7C248B0D0D002992FE /* FakeAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25F7B248B0D0D002992FE /* FakeAPIService.swift */; };
+		FCC25FB3248B72ED002992FE /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25FAE248B72ED002992FE /* SettingViewModel.swift */; };
+		FCC25FB4248B72ED002992FE /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25FB0248B72ED002992FE /* SettingCoordinator.swift */; };
+		FCC25FB5248B72ED002992FE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25FB2248B72ED002992FE /* SettingViewController.swift */; };
+		FCC25FB7248B7E2C002992FE /* BaseSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25FB6248B7E2C002992FE /* BaseSubtitleCell.swift */; };
+		FCC25FB9248B83FA002992FE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25FB8248B83FA002992FE /* AppCoordinator.swift */; };
+		FCC25FBB248CB215002992FE /* CreditCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25FBA248CB215002992FE /* CreditCardViewModel.swift */; };
+		FCC25FBD248CCA28002992FE /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25FBC248CCA28002992FE /* ButtonCell.swift */; };
+		FCC25FC0248CCD87002992FE /* ButtonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25FBF248CCD87002992FE /* ButtonCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +44,14 @@
 		FC4651F0248A505100508272 /* BaseCoorinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoorinator.swift; sourceTree = "<group>"; };
 		FCC25F79248B0C45002992FE /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		FCC25F7B248B0D0D002992FE /* FakeAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIService.swift; sourceTree = "<group>"; };
+		FCC25FAE248B72ED002992FE /* SettingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		FCC25FB0248B72ED002992FE /* SettingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
+		FCC25FB2248B72ED002992FE /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		FCC25FB6248B7E2C002992FE /* BaseSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSubtitleCell.swift; sourceTree = "<group>"; };
+		FCC25FB8248B83FA002992FE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FCC25FBA248CB215002992FE /* CreditCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardViewModel.swift; sourceTree = "<group>"; };
+		FCC25FBC248CCA28002992FE /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		FCC25FBF248CCD87002992FE /* ButtonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +104,10 @@
 		FC4651D2248A48B700508272 /* MVVM-C */ = {
 			isa = PBXGroup;
 			children = (
-				FC4651E7248A493900508272 /* CreditCardSetting */,
+				FCC25F78248B0C3A002992FE /* Model */,
+				FCC25F80248B6ACC002992FE /* Feature */,
+				FCC25F7F248B6852002992FE /* Infrastrature */,
 				FC4651D3248A48B700508272 /* AppDelegate.swift */,
-				FC4651F0248A505100508272 /* BaseCoorinator.swift */,
-				FCC25F7B248B0D0D002992FE /* FakeAPIService.swift */,
 				FC4651D5248A48B700508272 /* SceneDelegate.swift */,
 				FC4651DC248A48B900508272 /* Assets.xcassets */,
 				FC4651DE248A48B900508272 /* LaunchScreen.storyboard */,
@@ -103,10 +119,9 @@
 		FC4651E7248A493900508272 /* CreditCardSetting */ = {
 			isa = PBXGroup;
 			children = (
-				FCC25F78248B0C3A002992FE /* Model */,
+				FC4651E8248A497900508272 /* Coordinator */,
 				FC4651EB248A498F00508272 /* ViewModel */,
 				FC4651E9248A498100508272 /* ViewController */,
-				FC4651E8248A497900508272 /* Coordinator */,
 			);
 			path = CreditCardSetting;
 			sourceTree = "<group>";
@@ -130,6 +145,7 @@
 		FC4651EB248A498F00508272 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FCC25FBA248CB215002992FE /* CreditCardViewModel.swift */,
 				FC4651EE248A4A6B00508272 /* CreditCardSettingViewModel.swift */,
 			);
 			path = ViewModel;
@@ -141,6 +157,70 @@
 				FCC25F79248B0C45002992FE /* CreditCard.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FCC25F7F248B6852002992FE /* Infrastrature */ = {
+			isa = PBXGroup;
+			children = (
+				FCC25FBF248CCD87002992FE /* ButtonCellViewModel.swift */,
+				FCC25FBE248CCA30002992FE /* Cell */,
+				FC4651F0248A505100508272 /* BaseCoorinator.swift */,
+				FCC25F7B248B0D0D002992FE /* FakeAPIService.swift */,
+				FCC25FB8248B83FA002992FE /* AppCoordinator.swift */,
+			);
+			path = Infrastrature;
+			sourceTree = "<group>";
+		};
+		FCC25F80248B6ACC002992FE /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				FCC25FAC248B72ED002992FE /* Setting */,
+				FC4651E7248A493900508272 /* CreditCardSetting */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		FCC25FAC248B72ED002992FE /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				FCC25FAF248B72ED002992FE /* Coordinator */,
+				FCC25FAD248B72ED002992FE /* ViewModel */,
+				FCC25FB1248B72ED002992FE /* ViewController */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		FCC25FAD248B72ED002992FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCC25FAE248B72ED002992FE /* SettingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FCC25FAF248B72ED002992FE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FCC25FB0248B72ED002992FE /* SettingCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FCC25FB1248B72ED002992FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FCC25FB2248B72ED002992FE /* SettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FCC25FBE248CCA30002992FE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FCC25FB6248B7E2C002992FE /* BaseSubtitleCell.swift */,
+				FCC25FBC248CCA28002992FE /* ButtonCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,10 +339,18 @@
 			files = (
 				FC4651F1248A505100508272 /* BaseCoorinator.swift in Sources */,
 				FCC25F7C248B0D0D002992FE /* FakeAPIService.swift in Sources */,
+				FCC25FB9248B83FA002992FE /* AppCoordinator.swift in Sources */,
 				FC4651EF248A4A6B00508272 /* CreditCardSettingViewModel.swift in Sources */,
+				FCC25FB4248B72ED002992FE /* SettingCoordinator.swift in Sources */,
 				FCC25F7A248B0C45002992FE /* CreditCard.swift in Sources */,
+				FCC25FB3248B72ED002992FE /* SettingViewModel.swift in Sources */,
+				FCC25FB5248B72ED002992FE /* SettingViewController.swift in Sources */,
+				FCC25FBD248CCA28002992FE /* ButtonCell.swift in Sources */,
 				FC4651D8248A48B700508272 /* CreditCardSettingViewController.swift in Sources */,
+				FCC25FB7248B7E2C002992FE /* BaseSubtitleCell.swift in Sources */,
 				FC4651D4248A48B700508272 /* AppDelegate.swift in Sources */,
+				FCC25FC0248CCD87002992FE /* ButtonCellViewModel.swift in Sources */,
+				FCC25FBB248CB215002992FE /* CreditCardViewModel.swift in Sources */,
 				FC4651D6248A48B700508272 /* SceneDelegate.swift in Sources */,
 				FC4651ED248A49E600508272 /* CreditCardSettingCoordinator.swift in Sources */,
 			);

@@ -1,26 +1,19 @@
-//
-//  SceneDelegate.swift
-//  MVVM-C
-//
-//  Created by Bing Guo on 2020/6/5.
-//  Copyright © 2020 Bing Guo. All rights reserved.
-//
-
 import UIKit
+import RxSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    private var appCoordinator: AppCoordinator!
+    private let disposeBag = DisposeBag()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let viewModel = CreditCardSettingViewModel()
-            let nav = UINavigationController(rootViewController: CreditCardSettingViewController(viewModel: viewModel))
-            window.rootViewController = nav
-            self.window = window
-            window.makeKeyAndVisible()
+            appCoordinator = AppCoordinator(window: window)
+            appCoordinator.start()
+                .subscribe()
+                .disposed(by: disposeBag)
         }
     }
 
