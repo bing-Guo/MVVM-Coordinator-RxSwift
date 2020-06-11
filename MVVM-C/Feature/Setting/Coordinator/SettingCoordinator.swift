@@ -31,7 +31,7 @@ class SettingCoordinator: BaseCoordinator<Void> {
         return Observable.never()
     }
     
-    private func showCreditCardSetting(by card: CreditCardViewModel, in navigationController: UINavigationController) {
+    private func showCreditCardSetting(by card: CreditCard, in navigationController: UINavigationController) {
         let viewModel = CreditCardSettingViewModel()
         let viewController = CreditCardSettingViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)

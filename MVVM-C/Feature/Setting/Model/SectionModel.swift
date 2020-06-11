@@ -9,6 +9,6 @@ enum TableViewSection {
 }
 
 enum TableViewItem {
-    case creditCard(info: CreditCardViewModel)
+    case creditCard(info: CreditCard)
     case login(info: String)
 }

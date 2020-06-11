@@ -10,16 +10,24 @@ class SettingViewController: UIViewController {
     private let viewModel: SettingViewModel
     private let disposeBag = DisposeBag()
     private let tableView: UITableView
-    private lazy var dataSource = RxTableViewSectionedReloadDataSource<SettingOfSection>(configureCell: configureCell)
-    private lazy var configureCell: RxTableViewSectionedReloadDataSource<SettingOfSection>.ConfigureCell = { [unowned self] (dataSource, tableView, indexPath, item) in
+    
+    private let dataSource = RxTableViewSectionedReloadDataSource<SettingViewModel.Section>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
         
         switch item {
-        case .creditCard(let CreditCardViewModel):
-            return self.configStudentCell(vm: CreditCardViewModel, atIndex: indexPath)
-        case .login(let str):
-            return self.configTeacherCell(vm: str, atIndex: indexPath)
+        case .creditCard(let card):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BaseCell", for: indexPath) as! BaseSubtitleCell
+            
+            cell.textLabel?.text = card.holderName
+            cell.detailTextLabel?.text = card.cardNumber
+            cell.accessoryType = .disclosureIndicator
+            
+            return cell
+        case .logout:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath) as! ButtonCell
+            cell.titleLabel.text = "登出"
+            return cell
         }
-    }
+    })
     
     // MARK: - Constructor
     
@@ -35,7 +43,7 @@ class SettingViewController: UIViewController {
     }
     
     // MARK: - Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,37 +62,8 @@ class SettingViewController: UIViewController {
     }
     
     func bindViewModel() {
-        tableView.rx.setDelegate(self).disposed(by: disposeBag)
-        viewModel.items
+        viewModel.sections
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
     }
-}
-
-extension SettingViewController {
-    
-    func configStudentCell(vm: CreditCardViewModel, atIndex: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BaseCell", for: atIndex) as! BaseSubtitleCell
-        
-        cell.textLabel?.text = vm.holderName
-        cell.detailTextLabel?.text = vm.maskNumber
-        cell.accessoryType = .disclosureIndicator
-        
-        return cell
-    }
-    
-    func configTeacherCell(vm: String, atIndex: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: atIndex) as! ButtonCell
-        
-        cell.titleLabel.text = vm
-        return cell
-    }
-}
-
-extension SettingViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
-    
 }
