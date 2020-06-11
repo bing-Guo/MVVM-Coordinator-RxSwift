@@ -23,7 +23,7 @@ class CreditCardViewModel: SettingCellProtocol {
         self.cvc = card.cvc
     }
     
-    func toCreditCard(with card: CreditCard) -> CreditCard {
+    func toCreditCard() -> CreditCard {
         return CreditCard(holderName: self.holderName,
                           cardNumber: self.cardNumber,
                           expiryYear: self.expiryYear,

@@ -26,6 +26,7 @@
 		FCC25FBB248CB215002992FE /* CreditCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25FBA248CB215002992FE /* CreditCardViewModel.swift */; };
 		FCC25FBD248CCA28002992FE /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25FBC248CCA28002992FE /* ButtonCell.swift */; };
 		FCC25FC0248CCD87002992FE /* ButtonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC25FBF248CCD87002992FE /* ButtonCellViewModel.swift */; };
+		FCE9A3012491AD2F00B5E8E5 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A3002491AD2F00B5E8E5 /* SectionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FCC25FBA248CB215002992FE /* CreditCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardViewModel.swift; sourceTree = "<group>"; };
 		FCC25FBC248CCA28002992FE /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		FCC25FBF248CCD87002992FE /* ButtonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellViewModel.swift; sourceTree = "<group>"; };
+		FCE9A3002491AD2F00B5E8E5 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 		FCC25FAC248B72ED002992FE /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				FCE9A2FF2491AD1E00B5E8E5 /* Model */,
 				FCC25FAF248B72ED002992FE /* Coordinator */,
 				FCC25FAD248B72ED002992FE /* ViewModel */,
 				FCC25FB1248B72ED002992FE /* ViewController */,
@@ -221,6 +224,14 @@
 				FCC25FBC248CCA28002992FE /* ButtonCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FCE9A2FF2491AD1E00B5E8E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCE9A3002491AD2F00B5E8E5 /* SectionModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +363,7 @@
 				FCC25FC0248CCD87002992FE /* ButtonCellViewModel.swift in Sources */,
 				FCC25FBB248CB215002992FE /* CreditCardViewModel.swift in Sources */,
 				FC4651D6248A48B700508272 /* SceneDelegate.swift in Sources */,
+				FCE9A3012491AD2F00B5E8E5 /* SectionModel.swift in Sources */,
 				FC4651ED248A49E600508272 /* CreditCardSettingCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

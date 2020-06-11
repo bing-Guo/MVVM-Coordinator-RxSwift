@@ -33,7 +33,6 @@ class SettingCoordinator: BaseCoordinator<Void> {
     
     private func showCreditCardSetting(by card: CreditCardViewModel, in navigationController: UINavigationController) {
         let viewModel = CreditCardSettingViewModel()
-        viewModel.selected.onNext(card)
         let viewController = CreditCardSettingViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }

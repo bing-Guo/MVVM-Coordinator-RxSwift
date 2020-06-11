@@ -5,6 +5,7 @@ extension CreditCardSettingViewModel {
     
     enum FinishReason {
         case cancel
+        case selected(_ card: CreditCardViewModel)
     }
     
 }
@@ -12,8 +13,9 @@ extension CreditCardSettingViewModel {
 class CreditCardSettingViewModel {
     
     // MARK: - Input
-    
-    var selected: BehaviorSubject<CreditCardViewModel?>
+    let cancel: AnyObserver<Void>
+    let done: AnyObserver<Void>
+    var selectedCard: BehaviorSubject<CreditCardViewModel?>
     
     let cards = [
         CreditCardViewModel(card: CreditCard(holderName: "Bing", cardNumber: "4111111111111111", expiryYear: 04, expiryMonth: 11, cvc: "441")),
@@ -30,13 +32,17 @@ class CreditCardSettingViewModel {
     // MARK: - Constructor
     
     init() {
-        didClose = .just(.cancel)
-        selected = BehaviorSubject<CreditCardViewModel?>(value: nil)
-        models = Observable.from(optional: cards)
+        let cancelSubject = PublishSubject<Void>()
+        cancel = cancelSubject.asObserver()
         
-        _ = selected.subscribe { card in
-            print(card.element??.cardNumber)
-        }
+        let doneSubject = PublishSubject<Void>()
+        done = doneSubject.asObserver()
+        
+        selectedCard = BehaviorSubject<CreditCardViewModel?>(value: nil)
+        
+        didClose = Observable.merge(cancelSubject.map{ .cancel },
+                                    doneSubject.withLatestFrom(selectedCard).map { .selected($0!) } )
+        models = Observable.from(optional: cards)
     }
 }
 
